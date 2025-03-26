@@ -42,12 +42,14 @@ To find the packages you'd like to add you can search for them [here](https://se
 Nixos allows to build packages from sources, however, that would take long time and require lot of resources. Therefore it also allows to specify the machine that holds prebuild packages.
 
 Setup nix daemon to look for the depthai builds in the office - TBD
+Apple Silicon setup - TBD
 
 ## Remote building
 
 Similiarly the Nix daemon allows you to offload the build from you machine to another remote machine running Nix daemon and later just download the built package.
 
 Setup nix daemon to build depthai on desktop in the office - TBD
+Apple Silicon setup - TBD
 
 ## Copying the prebuild package
 
@@ -73,3 +75,4 @@ Give example how to do that - TBD
   - unify the MacOSX and Linux builds
   - upstream the fixes for other packages to build depthai-core on MacOSX 
   - split into generic part and then create different version of the package - core C/C++, Python, w/ OpenCV
+  - when linking examples in parallel it requires to much memory !!!
