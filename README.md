@@ -33,6 +33,11 @@ To update the dependencies run the `nix flake update`. This command downloads fr
 To enter the development environment run the following `nix develop`. This creates the environment based on your specification.
 
 # Misc
+## Tmux
+To run some task for longer time on remote machine you can use [tmux](https://github.com/tmux/tmux/wiki/Getting-Started).
+
+There's also configuration file [.tmux.conf](./.tmux.conf) which could be used and placed in `~/`
+
 ## Package search
 
 To find the packages you'd like to add you can search for them [here](https://search.nixos.org/packages)
