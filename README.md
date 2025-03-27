@@ -1,5 +1,7 @@
 # Nixpkgs DepthAIv3 
 
+![depthaiv3-nixpkgs](data/depthai-nix.gif)
+
 This repository provides a template for using DepthAIv3 packaged in the nixpkgs.
 
 ## Install Nix on the system
