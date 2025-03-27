@@ -32,6 +32,25 @@ To update the dependencies run the `nix flake update`. This command downloads fr
 
 To enter the development environment run the following `nix develop`. This creates the environment based on your specification.
 
+There's a hint to use binary cache on Cachix.org provided by [myself](https://github.com/phodina). Until upstreamed you'd have to build it manually on local machine. Also there might be some development versions available.
+
+```
+nix develop
+do you want to allow configuration setting 'extra-substituters' to be set to 'phodina-luxonis-depthai.cachix.org' (y/N)? y
+do you want to permanently mark this value as trusted (y/N)? y
+do you want to allow configuration setting 'extra-trusted-public-keys' to be set to 'phodina-luxonis-depthai.cachix.org-1:5GSc05BoSuEyBf0ifMQzu4bUUiE8QUJRiGFRxxD+/Yc=' (y/N)? y
+do you want to permanently mark this value as trusted (y/N)? y
+Python development environment activated
+Python version: Python 3.12.9
+Python path: /home/pethod/Luxonis/depthai-nix/.venv/bin/python
+(py-dev) ~/Luxonis/depthai-nix > python3
+Python 3.12.9 (main, Feb  4 2025, 14:38:38) [GCC 14.2.1 20241116] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import depthai as dai
+>>> print(dai.__version__)
+3.0.0-alpha.14
+```
+
 # Misc
 ## Tmux
 To run some task for longer time on remote machine you can use [tmux](https://github.com/tmux/tmux/wiki/Getting-Started).

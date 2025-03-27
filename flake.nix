@@ -9,6 +9,16 @@
     nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_upstream";
   };
 
+  # Give hint for binary cache to download prebuilt packages
+  nixConfig = {
+    extra-substituters = [
+      "phodina-luxonis-depthai.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "phodina-luxonis-depthai.cachix.org-1:5GSc05BoSuEyBf0ifMQzu4bUUiE8QUJRiGFRxxD+/Yc="
+    ];
+  };
+
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
