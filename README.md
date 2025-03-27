@@ -22,6 +22,9 @@ sudo systemctl start nix-daemon
 ```
 
 # Create Development environment
+## MacOSX
+Currently supported in separate banch `depthaiv3_features` - change this in the `flake.nix`
+
 ## Nix Flake
 
 Copy the `flake.nix` (optionally also the `flake.lock`) to project directory.

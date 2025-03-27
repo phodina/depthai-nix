@@ -7,6 +7,10 @@
 
     # Nixpkgs repository with packaged DepthAIv3 and it's dependencies
     nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_upstream";
+
+    # MacOSX branch
+    # Nixpkgs repository with packaged DepthAIv3 and it's dependencies
+    # nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_features";
   };
 
   # Give hint for binary cache to download prebuilt packages
