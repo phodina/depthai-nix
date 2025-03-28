@@ -94,6 +94,8 @@ Give example how to do that - TBD
 - [ ] [cpr](https://github.com/NixOS/nixpkgs/pull/393020)
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
 - [ ] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
+- [ ] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
+- [ ] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
 
 ## TBD
 - [ ] [depthai-data](https://github.com/phodina/depthai-data)
@@ -101,7 +103,6 @@ Give example how to do that - TBD
   - maybe move under Luxonis git repo
 - [ ] [depthai-core](https://github.com/phodina/nixpkgs/commits/depthaiv3_upstream/)
   - solve the list of patches that need to be applied
-  - unify the MacOSX and Linux builds
-  - upstream the fixes for other packages to build depthai-core on MacOSX 
   - split into generic part and then create different version of the package - core C/C++, Python, w/ OpenCV
   - when linking examples in parallel it requires to much memory !!!
+- [ ] basalt
