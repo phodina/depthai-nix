@@ -76,9 +76,10 @@
             export PATH=$CURRENT_DIR/.venv/bin:$PATH
             
             # Display Python information
-            echo "Python development environment activated"
-            echo "Python version: $(python --version)"
-            echo "Python path: $(which python)"
+            echo -e "\e[31mPython development environment activated\e[0m"
+            echo -e "\e[31mPython version: $(python --version)\e[0m"
+            echo -e "\e[31mDepthAI version: $(python -c "import depthai as dai; print(dai.__version__);")\e[0m"
+            echo -e "\e[31mPython path: $(which python)\e[0m"
             
             # You can add project-specific configurations here
             # export PROJECT_HOME=$CURRENT_DIR
