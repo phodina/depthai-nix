@@ -6,17 +6,17 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Nixpkgs repository with packaged DepthAIv3 and it's dependencies
-    nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_upstream";
+    # nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_upstream";
 
     # MacOSX branch
     # Nixpkgs repository with packaged DepthAIv3 and it's dependencies
-    # nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_features";
+     nixpkgs.url = "github:phodina/nixpkgs?ref=depthaiv3_features";
   };
 
   # Give hint for binary cache to download prebuilt packages
   nixConfig = {
     extra-substituters = [
-      "phodina-luxonis-depthai.cachix.org"
+      "https://phodina-luxonis-depthai.cachix.org"
     ];
     extra-trusted-public-keys = [
       "phodina-luxonis-depthai.cachix.org-1:5GSc05BoSuEyBf0ifMQzu4bUUiE8QUJRiGFRxxD+/Yc="

@@ -19,16 +19,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1742982159,
-        "narHash": "sha256-g0U4K7fhV2zLCstxxUif9CViIitHwypJCWMqMhvloVA=",
+        "lastModified": 1743120294,
+        "narHash": "sha256-1pI0gl8lcItA7V/LHSryhdp2Ov5WbfBfh/l1/eYOFxE=",
         "owner": "phodina",
         "repo": "nixpkgs",
-        "rev": "16ead9c8100312226f54bddcb05471866ae23675",
+        "rev": "48f1fedb744932eebbb33169a07fd03b062705fd",
         "type": "github"
       },
       "original": {
         "owner": "phodina",
-        "ref": "depthaiv3_upstream",
+        "ref": "depthaiv3_features",
         "repo": "nixpkgs",
         "type": "github"
       }
