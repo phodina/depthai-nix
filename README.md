@@ -24,9 +24,6 @@ sudo systemctl start nix-daemon
 ```
 
 # Create Development environment
-## MacOSX
-Currently supported in separate banch `depthaiv3_features` - change this in the `flake.nix`
-
 ## Nix Flake
 
 Copy the `flake.nix` (optionally also the `flake.lock`) to project directory.
@@ -70,8 +67,10 @@ To find the packages you'd like to add you can search for them [here](https://se
 
 Nixos allows to build packages from sources, however, that would take long time and require lot of resources. Therefore it also allows to specify the machine that holds prebuild packages.
 
-Setup nix daemon to look for the depthai builds in the office - TBD
-Apple Silicon setup - TBD
+[Cachix.org](https://docs.cachix.org/installation) is used to provide cached builds for Linux and MacOSX - `depthaiv3_features`.
+
+
+![depthai-cachix](data/cachix.png)
 
 ## Remote building
 
