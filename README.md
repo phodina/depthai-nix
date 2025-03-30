@@ -4,6 +4,8 @@
 
 This repository provides a template for using DepthAIv3 packaged in the nixpkgs.
 
+[Nixpkgs packaging request](https://github.com/NixOS/nixpkgs/issues/292618)
+
 ## Install Nix on the system
 
 Follow the [guide](https://nixos.org/download/) to setup Nix on the Linux or MacOSX system.
@@ -93,7 +95,7 @@ Give example how to do that - TBD
 - [ ] [cpr](https://github.com/NixOS/nixpkgs/pull/393020)
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
 - [ ] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
-- [ ] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
+- [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
 - [ ] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
 
 ## TBD
