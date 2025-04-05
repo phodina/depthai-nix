@@ -89,7 +89,38 @@ Nix also allows you to simply transfer built package to another machine. So it's
 
 Give example how to do that - TBD
 
-## Upstreaming
+## Docker build
+
+Support for building containers has been added.
+```
+nix build .#docker-image
+```
+
+The tarball will be available under `result` so just load it to `docker`:
+
+```
+ls result -al
+lrwxrwxrwx 1 pethod users 64 Apr  5 15:29 result -> /nix/store/ccrqd3rljb0ja9z4h0g8rs3zmms3szyj-depthai-image.tar.gz
+
+docker load < result
+docker image ls
+REPOSITORY                                                     TAG                                IMAGE ID       CREATED        SIZE
+depthai-image                                                  latest                             02795aed8e49   55 years ago   3.29GB
+```
+
+Then run the container:
+
+```
+docker run -it depthai-image:latest
+bash-5.2# python3
+Python 3.12.9 (main, Feb  4 2025, 14:38:38) [GCC 14.2.1 20241116] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import depthai
+>>> print(depthai.__version__)
+3.0.0-alpha.14
+```
+
+# Upstreaming
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
 - [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
