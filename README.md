@@ -1,5 +1,7 @@
 # Nixpkgs DepthAIv3 
 
+> Updated to the latest V3 alpha 15 release
+
 ![depthaiv3-nixpkgs](data/depthai-nix.gif)
 
 This repository provides a template for using DepthAIv3 packaged in the nixpkgs.
@@ -87,7 +89,7 @@ Nix also allows you to simply transfer built package to another machine. So it's
 
 Give example how to do that - TBD
 
-# Upstreaming
+## Upstreaming
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
 - [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
@@ -97,6 +99,9 @@ Give example how to do that - TBD
 - [ ] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
 - [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
 - [ ] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
+
+## DepthAI patches
+- [ ] [Hunter as optional dependency and skip download of files if they are already downloaded](https://github.com/luxonis/depthai-core/pull/1303)
 
 ## TBD
 - [ ] [depthai-data](https://github.com/phodina/depthai-data)
