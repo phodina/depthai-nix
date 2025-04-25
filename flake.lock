@@ -19,11 +19,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1745269598,
-        "narHash": "sha256-VBRhiDYt5jqRP/PEX9zY6nGWaUzVuYSMmqDG9oCKDYI=",
+        "lastModified": 1745569567,
+        "narHash": "sha256-85UrQ8Yl5XKxayJjKkMcWak7RmOUCAQLIkTDYbQ6d04=",
         "owner": "phodina",
         "repo": "nixpkgs",
-        "rev": "60e04009e6e1d16aef467ecfc32b994ccaebfcaf",
+        "rev": "c177e052656152acf32b3c9353d25848b00b68f7",
         "type": "github"
       },
       "original": {
