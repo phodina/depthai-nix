@@ -129,7 +129,7 @@ cachix authtoken <TOKEN>
 nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 ```
 
-## Upstreaming
+## Nixpkgs upstreaming
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
 - [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
@@ -138,7 +138,7 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
 - [ ] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
 - [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
-- [ ] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
+- [x] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
 
 ## DepthAI patches
 - [ ] [Hunter as optional dependency and skip download of files if they are already downloaded](https://github.com/luxonis/depthai-core/pull/1303)
