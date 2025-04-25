@@ -45,6 +45,32 @@
         # Create a Python with selected packages
         pythonEnv = pkgs.python3.withPackages pythonPackages;
         
+        # Ensure the docker image will display GUI Windows
+        guiPackages = with pkgs; [
+          xorg.libX11
+          xorg.libXcursor
+          xorg.libXrandr
+          xorg.libXi
+          xorg.libXfixes
+          xorg.libXcomposite
+          xorg.libXdamage
+          xorg.libXext
+          xorg.libXrender
+          xorg.libXtst
+          xorg.libXinerama
+          xorg.libxcb
+          xorg.libXScrnSaver
+          glfw
+          libGL
+          vulkan-loader
+          mesa
+          glib
+          gtk3
+          pango
+          atk
+          gdk-pixbuf
+          cairo
+        ];
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [
@@ -81,6 +107,73 @@
             export PS1="(py-dev) \[\033[1;32m\]\w\[\033[0m\] > "
           '';
         };
+
+        packages.docker-image = pkgs.dockerTools.buildLayeredImage {
+          name = "depthai-image";
+          tag = "latest";
+
+          contents = [
+            pkgs.bashInteractive
+            pkgs.coreutils
+
+            pythonEnv
+            pkgs.depthai-core
+
+            pkgs.gcc-unwrapped.lib
+            pkgs.zlib
+
+            pkgs.iproute2
+            pkgs.nettools
+
+            guiPackages
+          ];
+
+          config = {
+            Env = [
+              "LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [
+                pkgs.gcc-unwrapped.lib
+                pkgs.zlib
+                pkgs.wayland-protocols
+                pkgs.xorg.libX11
+                pkgs.xorg.libXcursor
+                pkgs.xorg.libXrandr
+                pkgs.xorg.libXi
+                pkgs.vulkan-loader
+                pkgs.libGL
+                pkgs.glib.out
+              ]}"
+              "DISPLAY=:0"
+              "QT_X11_NO_MITSHM=1"
+              "NO_AT_BRIDGE=1"
+              "PYTHONPATH=${pythonEnv}/${pythonEnv.sitePackages}:${pkgs.depthai-core}/${pythonEnv.sitePackages}"
+            ];
+            WorkingDir = "/app";
+            Cmd = ["${pkgs.bashInteractive}/bin/bash"];
+
+            NetworkDisabled = false;
+
+            Volumes = {
+              "/dev/bus/usb" = {};
+              "/tmp/.X11-unix" = {};
+            };
+
+            CapAdd = ["SYS_PTRACE"];
+
+           extraCommands = ''
+            mkdir -p mnt
+            chmod 777 mnt
+            # Create the entrypoint script to handle user/group setup
+            mkdir -p usr/bin
+            cat > usr/bin/entrypoint.sh << 'EOF'
+            #!/bin/bash
+            set -e
+              USER_ID=${LOCAL_USER_ID:-1000}
+              GROUP_ID=${LOCAL_GROUP_ID:-1000}
+EOF
+            chmod +x usr/bin/entrypoint.sh
+'';
+     };
+};
       }
     );
 }
