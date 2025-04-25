@@ -120,7 +120,16 @@ Type "help", "copyright", "credits" or "license" for more information.
 3.0.0-alpha.14
 ```
 
-# Upstreaming
+## Cachix contributions
+To push recent build to cachix clone or fetch the latest commit in the nixpkgs:
+```
+# Setup once the token
+cachix authtoken <TOKEN>
+# Push the build
+nix-build -A depthai-core | cachix push phodina-luxonis-depthai
+```
+
+## Upstreaming
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
 - [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
