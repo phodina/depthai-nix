@@ -143,7 +143,7 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 ## DepthAI patches
 - [ ] [Hunter as optional dependency and skip download of files if they are already downloaded](https://github.com/luxonis/depthai-core/pull/1303)
 
-## TBD
+## DRAFT [MR](https://github.com/NixOS/nixpkgs/pull/402019)
 - [ ] [depthai-data](https://github.com/phodina/depthai-data)
   - solve manily Licenses of the files 
   - maybe move under Luxonis git repo
