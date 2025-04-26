@@ -136,7 +136,7 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 - [ ] [neargye-semver](https://github.com/NixOS/nixpkgs/pull/393018)
 - [ ] [cpr](https://github.com/NixOS/nixpkgs/pull/393020)
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
-- [ ] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
+- [x] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
 - [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
 - [x] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
 
