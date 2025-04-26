@@ -133,7 +133,7 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
 - [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
-- [ ] [neargye-semver](https://github.com/NixOS/nixpkgs/pull/393018)
+- [x] [neargye-semver](https://github.com/NixOS/nixpkgs/pull/393018)
 - [ ] [cpr](https://github.com/NixOS/nixpkgs/pull/393020)
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
 - [x] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
