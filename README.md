@@ -152,3 +152,4 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
   - split into generic part and then create different version of the package - core C/C++, Python, w/ OpenCV
   - when linking examples in parallel it requires to much memory !!!
 - [ ] [basalt](https://github.com/phodina/nixpkgs/tree/basalt)
+- [ ] [rtbmap](https://github.com/phodina/nixpkgs/tree/rtbmap)
