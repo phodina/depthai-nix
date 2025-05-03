@@ -139,6 +139,8 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 - [x] [fp16](https://github.com/NixOS/nixpkgs/pull/393036)
 - [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
 - [x] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
+- [x] [rtabmap](https://github.com/NixOS/nixpkgs/pull/403078)
+- [ ] [oakctl](https://github.com/NixOS/nixpkgs/pull/403889)
 
 ## DepthAI patches
 - [ ] [Hunter as optional dependency and skip download of files if they are already downloaded](https://github.com/luxonis/depthai-core/pull/1303)
@@ -152,4 +154,3 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
   - split into generic part and then create different version of the package - core C/C++, Python, w/ OpenCV
   - when linking examples in parallel it requires to much memory !!!
 - [ ] [basalt](https://github.com/phodina/nixpkgs/tree/basalt)
-- [ ] [rtbmap](https://github.com/phodina/nixpkgs/tree/rtbmap)
