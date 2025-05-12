@@ -132,7 +132,7 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 ## Nixpkgs upstreaming
 - [x] [apriltag](https://github.com/NixOS/nixpkgs/pull/392308)
 - [x] [xlink](https://github.com/NixOS/nixpkgs/pull/392352)
-- [ ] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
+- [x] [libnop](https://github.com/NixOS/nixpkgs/pull/393017)
 - [x] [neargye-semver](https://github.com/NixOS/nixpkgs/pull/393018)
 - [ ] [cpr](https://github.com/NixOS/nixpkgs/pull/393020)
 - [ ] [ws-protocol](https://github.com/NixOS/nixpkgs/pull/393027)
@@ -140,12 +140,12 @@ nix-build -A depthai-core | cachix push phodina-luxonis-depthai
 - [x] [xtensor](https://github.com/NixOS/nixpkgs/pull/393992)
 - [x] [pangolin](https://github.com/NixOS/nixpkgs/pull/393990)
 - [x] [rtabmap](https://github.com/NixOS/nixpkgs/pull/403078)
-- [ ] [oakctl](https://github.com/NixOS/nixpkgs/pull/403889)
+- [x] [oakctl](https://github.com/NixOS/nixpkgs/pull/403889)
 
 ## DepthAI patches
 - [ ] [Hunter as optional dependency and skip download of files if they are already downloaded](https://github.com/luxonis/depthai-core/pull/1303)
 
-## DRAFT [MR](https://github.com/NixOS/nixpkgs/pull/402019)
+## [MR](https://github.com/NixOS/nixpkgs/pull/402019)
 - [ ] [depthai-data](https://github.com/phodina/depthai-data)
   - solve manily Licenses of the files 
   - maybe move under Luxonis git repo
